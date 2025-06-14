@@ -1,0 +1,60 @@
+﻿@using ObiletJourneyApp.Models.DTO
+@model GetBusJourneysResponse
+
+@{
+    var origin = Model?.Data?.FirstOrDefault()?.OriginLocation ?? "Istanbul Europe";
+    var destination = Model?.Data?.FirstOrDefault()?.DestinationLocation ?? "Ankara";
+    var departDate = (Model?.Data?.FirstOrDefault()?.Journey?.Departure ?? DateTime.Now).ToString("dd MMMM dddd");
+    var departDateQueryParam = Model?.Data?.FirstOrDefault()?.Journey?.Departure.ToString("yyyy-MM-dd");
+    var backUrl = $"/Home/Index?originId={Model?.Data?.FirstOrDefault()?.OriginLocationId}&destinationId={Model?.Data?.FirstOrDefault().DestinationLocationId}&departDate={departDateQueryParam}";
+}
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<link href="~/css/journey.css" rel="stylesheet" />
+
+
+<div class="obus-journey-container">
+    <div class="obus-journey-header">
+        <a href="@backUrl" class="obus-back" title="Go Back">&#8592;</a>
+        <div class="obus-journey-title">@origin - @destination</div>
+        <div class="obus-journey-date">@departDate</div>
+    </div>
+    <div class="obus-journey-list">
+        @if (Model?.Data != null && Model.Data.Any())
+        {
+            foreach (var item in Model.Data)
+            {
+                var dep = item.Journey?.Departure.ToString("HH:mm") ?? "--:--";
+                var arr = item.Journey?.Arrival.ToString("HH:mm") ?? "--:--";
+                var route = $"{item.OriginLocation} - {item.DestinationLocation}";
+                var price = item.Journey?.InternetPrice.ToString("N2") ?? "0.00";
+                var currency = item.Journey?.Currency ?? "TRY";
+        <div class="obus-journey-card">
+            <div class="obus-journey-info">
+                <div class="obus-journey-times">
+                    <div>
+                        <div class="obus-journey-label">DEPARTURE</div>
+                        <span class="obus-journey-time">@dep</span>
+                    </div>
+                    <span class="obus-journey-arrow">&#8594;</span>
+                    <div>
+                        <div class="obus-journey-label">ARRIVAL</div>
+                        <span class="obus-journey-time">@arr</span>
+                    </div>
+                </div>
+                <div class="obus-journey-route">@route</div>
+            </div>
+            <div class="obus-journey-price">
+                @price&nbsp;@currency
+            </div>
+        </div>
+            }
+        }
+        else
+        {
+            <div class="alert alert-info text-center">No journeys found.</div>
+        }
+    </div>
+</div>

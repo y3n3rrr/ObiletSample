@@ -1,0 +1,108 @@
+
+.obus-journey-container {
+    max-width: 550px;
+    margin: 40px auto;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+
+.obus-journey-header {
+    background: #3559c7;
+    color: #fff;
+    padding: 24px 0 16px 0;
+    text-align: center;
+    border-radius: 0;
+    position: relative;
+}
+
+    .obus-journey-header .obus-back {
+        position: absolute;
+        left: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.obus-journey-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.obus-journey-date {
+    font-size: 1.1rem;
+    color: #dbe2fa;
+    margin-top: 6px;
+}
+
+.obus-journey-list {
+    padding: 24px 16px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.obus-journey-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(60,60,60,0.04);
+    border: 1px solid #e0e0e0;
+    margin-bottom: 18px;
+    padding: 18px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.obus-journey-info {
+    flex: 1;
+}
+
+.obus-journey-times {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 4px;
+}
+
+.obus-journey-label {
+    font-size: 0.85rem;
+    color: #3559c7;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.obus-journey-time {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #3559c7;
+    margin-right: 4px;
+}
+
+.obus-journey-arrow {
+    font-size: 1.1rem;
+    color: #3559c7;
+    margin: 0 4px;
+}
+
+.obus-journey-route {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 2px;
+}
+
+.obus-journey-price {
+    background: #e74c3c;
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 12px 24px;
+    min-width: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

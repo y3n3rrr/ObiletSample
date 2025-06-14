@@ -1,0 +1,160 @@
+
+.obus-container {
+    max-width: 500px;
+    margin: 40px auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+}
+
+.obus-header {
+    background: #3559c7;
+    color: #fff;
+    padding: 32px 0 24px 0;
+    font-size: 0;
+    border-radius: 0;
+}
+
+.obus-form-section {
+    padding: 24px;
+    background: #fafafa;
+}
+
+.obus-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(60,60,60,0.04);
+    margin-bottom: 18px;
+    padding: 18px 16px 18px 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.obus-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.obus-label {
+    font-weight: bold;
+    color: #3559c7;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.obus-icon {
+    font-size: 1.3rem;
+    color: #b0b0b0;
+    margin-right: 4px;
+}
+
+.obus-swap-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 2px solid #b0b0b0;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: box-shadow 0.2s;
+}
+
+.obus-swap-btn:hover {
+    box-shadow: 0 2px 8px rgba(60,60,60,0.08);
+}
+
+.obus-date-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-left: 16px;
+}
+
+.obus-btn-today, .obus-btn-tomorrow {
+    border: none;
+    outline: none;
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.obus-btn-today {
+    background: #61676f;
+    color: #fff;
+    width: 100%
+}
+
+.obus-btn-tomorrow {
+    background: #fff;
+    color: #61676f;
+    border: 1px solid #61676f;
+}
+
+.obus-btn-today.active, .obus-btn-tomorrow.active {
+    background: #3559c7 !important;
+    color: #fff !important;
+    border: 1px solid #3559c7 !important;
+}
+
+.obus-search-btn {
+    width: 100%;
+    background: #3559c7;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 16px 0;
+    margin: 18px 0 0 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.obus-search-btn:hover {
+    background: #2747a6;
+}
+
+.obus-info {
+    background: #fafafa;
+    border-radius: 0 0 6px 6px;
+    padding: 24px;
+    color: #757575;
+    font-size: 1.1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.obus-datepicker {
+    width: 220px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #757575;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background: transparent;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    transition: background 0.2s, color 0.2s;
+}
+
+.obus-datepicker:focus {
+    background: #f0f4ff;
+    color: #3559c7;
+    border-bottom: 2px solid #3559c7;
+}
