@@ -108,22 +108,22 @@ namespace ObiletJourneyApp.Models.DTO
         public bool HasDynamicCancellation { get; set; }
 
         [JsonPropertyName("partner-terms-and-conditions")]
-        public object PartnerTermsAndConditions { get; set; }
+        public object? PartnerTermsAndConditions { get; set; }
 
         [JsonPropertyName("partner-available-alphabets")]
-        public string PartnerAvailableAlphabets { get; set; }
+        public string? PartnerAvailableAlphabets { get; set; }
 
         [JsonPropertyName("provider-id")]
         public int ProviderId { get; set; }
 
         [JsonPropertyName("partner-code")]
-        public string PartnerCode { get; set; }
+        public string? PartnerCode { get; set; }
 
         [JsonPropertyName("enable-full-journey-display")]
         public bool EnableFullJourneyDisplay { get; set; }
 
         [JsonPropertyName("provider-name")]
-        public string ProviderName { get; set; }
+        public string? ProviderName { get; set; }
 
         [JsonPropertyName("enable-all-stops-display")]
         public bool EnableAllStopsDisplay { get; set; }
@@ -132,10 +132,10 @@ namespace ObiletJourneyApp.Models.DTO
         public bool IsDestinationDomestic { get; set; }
 
         [JsonPropertyName("min-len-gov-id")]
-        public object MinLenGovId { get; set; }
+        public object? MinLenGovId { get; set; }
 
         [JsonPropertyName("max-len-gov-id")]
-        public object MaxLenGovId { get; set; }
+        public object? MaxLenGovId { get; set; }
 
         [JsonPropertyName("require-foreign-gov-id")]
         public bool RequireForeignGovId { get; set; }
@@ -144,7 +144,7 @@ namespace ObiletJourneyApp.Models.DTO
         public bool IsCancellationInfoText { get; set; }
 
         [JsonPropertyName("cancellation-offset-info-text")]
-        public object CancellationOffsetInfoText { get; set; }
+        public object? CancellationOffsetInfoText { get; set; }
 
         [JsonPropertyName("is-time-zone-not-equal")]
         public bool IsTimeZoneNotEqual { get; set; }
@@ -168,7 +168,7 @@ namespace ObiletJourneyApp.Models.DTO
         public double MarkupFee { get; set; }
 
         [JsonPropertyName("partner-nationality")]
-        public object PartnerNationality { get; set; }
+        public object? PartnerNationality { get; set; }
 
         [JsonPropertyName("generate-barcode")]
         public bool GenerateBarcode { get; set; }
@@ -222,13 +222,13 @@ namespace ObiletJourneyApp.Models.DTO
         public bool IsNationalIdentityNumberValidator { get; set; }
 
         [JsonPropertyName("national-identity-validation-rules")]
-        public object NationalIdentityValidationRules { get; set; }
+        public object? NationalIdentityValidationRules { get; set; }
 
         [JsonPropertyName("internet-price-rate")]
-        public object InternetPriceRate { get; set; }
+        public object? InternetPriceRate { get; set; }
 
         [JsonPropertyName("journey-detail-carrier-base")]
-        public object JourneyDetailCarrierBase { get; set; }
+        public object? JourneyDetailCarrierBase { get; set; }
 
         [JsonPropertyName("has-shuttle-selection")]
         public bool HasShuttleSelection { get; set; }
@@ -252,10 +252,10 @@ namespace ObiletJourneyApp.Models.DTO
         public bool IsFullAddress { get; set; }
 
         [JsonPropertyName("display-offset-started")]
-        public string DisplayOffsetStarted { get; set; }
+        public string? DisplayOffsetStarted { get; set; }
 
         [JsonPropertyName("display-offset-after-min")]
-        public object DisplayOffsetAfterMin { get; set; }
+        public object? DisplayOffsetAfterMin { get; set; }
 
         [JsonPropertyName("is-send-order-completion-pdf")]
         public bool IsSendOrderCompletionPdf { get; set; }
@@ -271,39 +271,39 @@ namespace ObiletJourneyApp.Models.DTO
         [JsonPropertyName("priority")]
         public int? Priority { get; set; }
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
         [JsonPropertyName("description")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         [JsonPropertyName("is-promoted")]
         public bool IsPromoted { get; set; }
         [JsonPropertyName("back-color")]
-        public string BackColor { get; set; }
+        public string? BackColor { get; set; }
         [JsonPropertyName("fore-color")]
-        public string ForeColor { get; set; }
+        public string? ForeColor { get; set; }
         [JsonPropertyName("partner-notes")]
-        public object PartnerNotes { get; set; }
+        public object? PartnerNotes { get; set; }
     }
 
     public class Journey
     {
         [JsonPropertyName("kind")]
-        public string Kind { get; set; }
+        public string? Kind { get; set; }
         [JsonPropertyName("code")]
-        public string Code { get; set; }
+        public string? Code { get; set; }
         [JsonPropertyName("stops")]
         public List<Stop> Stops { get; set; }
         [JsonPropertyName("origin")]
-        public string Origin { get; set; }
+        public string? Origin { get; set; }
         [JsonPropertyName("destination")]
-        public string Destination { get; set; }
+        public string? Destination { get; set; }
         [JsonPropertyName("departure")]
         public DateTime Departure { get; set; }
         [JsonPropertyName("arrival")]
         public DateTime Arrival { get; set; }
         [JsonPropertyName("currency")]
-        public string Currency { get; set; }
+        public string? Currency { get; set; }
         [JsonPropertyName("duration")]
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         [JsonPropertyName("original-price")]
         public double OriginalPrice { get; set; }
         [JsonPropertyName("internet-price")]
@@ -311,31 +311,31 @@ namespace ObiletJourneyApp.Models.DTO
         [JsonPropertyName("provider-internet-price")]
         public double? ProviderInternetPrice { get; set; }
         [JsonPropertyName("booking")]
-        public object Booking { get; set; }
+        public object? Booking { get; set; }
         [JsonPropertyName("bus-name")]
-        public string BusName { get; set; }
+        public string? BusName { get; set; }
         [JsonPropertyName("policy")]
         public Policy Policy { get; set; }
         [JsonPropertyName("features")]
         public List<string> Features { get; set; } = new List<string>();
         [JsonPropertyName("features-description")]
-        public object FeaturesDescription { get; set; }
+        public object? FeaturesDescription { get; set; }
         [JsonPropertyName("description")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         [JsonPropertyName("available")]
-        public object Available { get; set; }
+        public object? Available { get; set; }
         [JsonPropertyName("partner-provider-code")]
-        public object PartnerProviderCode { get; set; }
+        public object? PartnerProviderCode { get; set; }
         [JsonPropertyName("peron-no")]
-        public object PeronNo { get; set; }
+        public object? PeronNo { get; set; }
         [JsonPropertyName("partner-provider-id")]
-        public object PartnerProviderId { get; set; }
+        public object? PartnerProviderId { get; set; }
         [JsonPropertyName("is-segmented")]
         public bool IsSegmented { get; set; }
         [JsonPropertyName("partner-name")]
-        public object PartnerName { get; set; }
+        public object? PartnerName { get; set; }
         [JsonPropertyName("provider-code")]
-        public object ProviderCode { get; set; }
+        public object? ProviderCode { get; set; }
         [JsonPropertyName("sorting-price")]
         public double SortingPrice { get; set; }
         [JsonPropertyName("has-multiple-brandedfare-selection")]
@@ -343,13 +343,13 @@ namespace ObiletJourneyApp.Models.DTO
         [JsonPropertyName("has-available-seat-info")]
         public bool HasAvailableSeatInfo { get; set; }
         [JsonPropertyName("duration-offset")]
-        public string DurationOffset { get; set; }
+        public string? DurationOffset { get; set; }
     }
 
     public class Policy
     {
         [JsonPropertyName("max-seats")]
-        public object MaxSeats { get; set; }
+        public object? MaxSeats { get; set; }
         [JsonPropertyName("max-single")]
         public int? MaxSingle { get; set; }
         [JsonPropertyName("max-single-males")]
@@ -371,9 +371,9 @@ namespace ObiletJourneyApp.Models.DTO
         [JsonPropertyName("kolayCarLocationId")]
         public int? KolayCarLocationId { get; set; }
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
         [JsonPropertyName("station")]
-        public string Station { get; set; }
+        public string? Station { get; set; }
         [JsonPropertyName("time")]
         public DateTime? Time { get; set; }
         [JsonPropertyName("is-origin")]
@@ -385,38 +385,38 @@ namespace ObiletJourneyApp.Models.DTO
         [JsonPropertyName("index")]
         public int Index { get; set; }
         [JsonPropertyName("obilet-station-id")]
-        public object ObiletStationId { get; set; }
+        public object? ObiletStationId { get; set; }
         [JsonPropertyName("map-url")]
-        public object MapUrl { get; set; }
+        public object? MapUrl { get; set; }
         [JsonPropertyName("station-phone")]
-        public object StationPhone { get; set; }
+        public object? StationPhone { get; set; }
         [JsonPropertyName("station-address")]
-        public object StationAddress { get; set; }
+        public object? StationAddress { get; set; }
         [JsonPropertyName("tz-code")]
-        public string TzCode { get; set; }
+        public string? TzCode { get; set; }
     }
 
     public class GetBusJourneysResponse
     {
         [JsonPropertyName("status")]
-        public string Status { get; set; }
+        public string? Status { get; set; }
         [JsonPropertyName("data")]
         public List<Datum> Data { get; set; }
         [JsonPropertyName("message")]
-        public object Message { get; set; }
+        public object? Message { get; set; }
         [JsonPropertyName("user-message")]
-        public object UserMessage { get; set; }
+        public object? UserMessage { get; set; }
         [JsonPropertyName("api-request-id")]
-        public object ApiRequestId { get; set; }
+        public object? ApiRequestId { get; set; }
         [JsonPropertyName("controller")]
-        public string Controller { get; set; }
+        public string? Controller { get; set; }
         [JsonPropertyName("client-request-id")]
-        public object ClientRequestId { get; set; }
+        public object? ClientRequestId { get; set; }
         [JsonPropertyName("web-correlation-id")]
-        public object WebCorrelationId { get; set; }
+        public object? WebCorrelationId { get; set; }
         [JsonPropertyName("correlation-id")]
-        public string CorrelationId { get; set; }
+        public string? CorrelationId { get; set; }
         [JsonPropertyName("parameters")]
-        public object Parameters { get; set; }
+        public object? Parameters { get; set; }
     }
 }
