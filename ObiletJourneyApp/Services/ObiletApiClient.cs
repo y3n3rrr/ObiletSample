@@ -17,8 +17,7 @@ namespace ObiletJourneyApp.Services
             _http.DefaultRequestHeaders.Authorization = new("Basic", _token);
         }
 
-        public async Task<GetSessionResponse> GetSession(GetSessionRequest _request)
-            => await CallApi<GetSessionResponse>("client/GetSession", _request);
+        public async Task<GetSessionResponse> GetSession(GetSessionRequest _request) => await CallApi<GetSessionResponse>("client/GetSession", _request);
 
         public async Task<GetBusLocationsResponse> GetBusLocations(GetBusLocationsRequest _request)
         {
@@ -37,7 +36,6 @@ namespace ObiletJourneyApp.Services
         {
             var r = await _http.PostAsJsonAsync(path, body);
             r.EnsureSuccessStatusCode();
-            var asddd = await r.Content.ReadAsStringAsync();
             return await r.Content.ReadFromJsonAsync<T>() ??
                    throw new Exception("Deserialize error");
         }
