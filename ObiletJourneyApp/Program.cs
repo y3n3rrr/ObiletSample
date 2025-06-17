@@ -1,6 +1,6 @@
 using ObiletJourneyApp.Models.DTO;
 using ObiletJourneyApp.Services;
-
+using ObiletJourneyApp.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +31,8 @@ if (!app.Environment.IsDevelopment())
 app.UseRequestLocalization(); 
 app.UseHttpsRedirection(); 
 app.UseStaticFiles();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseRouting();
 app.UseSession();
